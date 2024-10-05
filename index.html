@@ -1,120 +1,102 @@
-
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
     <style>
-       
-:root{
-    --bg-color:white;
-    --text-color:black;
-}
-body{
-/*     font-family: Satoshi; */
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--bg-color);
-}
+        :root {
+            --bg-color: white;
+            --text-color: black;
+        }
 
+        body {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--bg-color);
+        }
 
-span{
-    width: 100px;
-    height: 100px;
-    opacity: 0.1;
-}
-span:nth-child(32),
-span:nth-child(39),
-span:nth-child(40),
-span:nth-child(41),
-span:nth-child(52),
-span:nth-child(59)
-{
-    background-color: red;
-}
+        span {
+            width: 100px;
+            height: 100px;
+            opacity: 0;
+        }
 
-.information-div{
-    margin-inline: 122px;
-}
-div{
-    font-size: 24px;
-    line-height: 41px;
-    text-align: center;
-    color: var(--text-color);
-    font-weight: 500;
-}
+        .information-div {
+            margin-inline: 122px;
+        }
 
-    input {
-        color: black;
-        font-weight: bolder;           /* Placeholder text color */
-        font-size: inherit;   /* Inherit font size from parent */
-        border: none;         /* Remove border */
-        outline: none;        /* Remove focus outline */
-        background: none;     /* Remove background */
-        padding: 0;           /* Remove padding */
-        width: auto;          /* Auto width initially */
-        display: inline-block;
-    }
-input::placeholder{
-    color: black;
-    font-weight: bold;
-}
+        div {
+            font-size: 24px;
+            line-height: 41px;
+            text-align: center;
+            color: var(--text-color);
+            font-weight: 500;
+        }
 
+        input {
+            color: black;
+            font-weight: bolder;
+            font-size: inherit;
+            border: none;
+            outline: none;
+            background: none;
+            padding: 0;
+            width: auto;
+            display: inline-block;
+        }
+
+        input::placeholder {
+            color: black;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <div class="information-div">
-        <div class="information-1">We would love to hear from you! If you have a project in mind or just want to say hello, feel free to reach out. You can contact Muhammad Zain via [muhammadzain954208@gmail.com] or give me a call at [+92 347 9937677]. If you prefer, you can also connect with me on LinkedIn or check out my work on GitHub. Just fill in your details below and let’s start a conversation.  Tell me your name <span style="color: black;">([</span> your-name <span style="color: black;">])</span> and share your email <span style="color: black;">([</span> your-email <span style="color: black;">])</span> , and if you want, include a brief message about what you're looking for <span style="color: black;">([</span> your-message <span style="color: black;">])</span>. I’ll get back to you as soon as possible. Looking forward to connecting!
+        <div class="information">
+            We would love to hear from you! If you have a project in mind or just want to say hello, feel free to reach out. You can contact Muhammad Zain via [muhammadzain954208@gmail.com] or give me a call at [+92 347 9937677]. If you prefer, you can also connect with me on LinkedIn or check out my work on GitHub. Just fill in your details below and let’s start a conversation. Tell me your name ([your-name]) and share your email ([your-email]), and if you want, include a brief message about what you're looking for ([your-message]). I’ll get back to you as soon as possible. Looking forward to connecting!
         </div>
     </div>
 
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script>
-         var information = document.querySelector(".information");
-  const infoArray = information.innerHTML.split(" ");
-  information.innerHTML = "";
-  console.log(infoArray);
+        document.addEventListener("DOMContentLoaded", () => {
+            var information = document.querySelector(".information");
+            const infoArray = information.innerHTML.split(" ");
+            information.innerHTML = "";
 
-  var infoDiv = document.querySelector(".information-div"); // Corrected selector
-  if (infoDiv) { // Ensure infoDiv exists
-      infoArray.forEach((element, index) => {  // Using forEach instead of map
-          let node = document.createElement("span");
-          
-          if (index == 32) {
-              // Create an input element for index 32
-              let inputNode = document.createElement("input");
-              inputNode.type = "text";
-              inputNode.value = "muhammadzain954208@gmail.com"; // Set the input value
-              inputNode.style.border = "none"; // Optional styling
-              inputNode.style.outline = "none"; // Optional styling
-              inputNode.style.fontSize = "inherit"; // Ensure input font size matches surrounding text
+            infoArray.forEach((element, index) => {
+                let node = document.createElement("span");
 
-              node.appendChild(inputNode); // Append the input to the span
-          } else {
-              // For all other indices, create normal text nodes
-              let textNode  = document.createTextNode(element + " "); // Adding a space between words
-              node.appendChild(textNode);
-          }
+                if (index == 32) {
+                    let inputNode = document.createElement("input");
+                    inputNode.type = "text";
+                    inputNode.value = "muhammadzain954208@gmail.com";
+                    inputNode.style.border = "none";
+                    inputNode.style.outline = "none";
+                    inputNode.style.fontSize = "inherit";
+                    node.appendChild(inputNode);
+                } else {
+                    let textNode = document.createTextNode(element + " ");
+                    node.appendChild(textNode);
+                }
 
-          information.appendChild(node);  // Append to information
-      });
-  }
+                information.appendChild(node);
+            });
 
-  // Ensure GSAP runs after spans are created
-  gsap.to("span", {
-      opacity: 1,
-      y: 0,  // Initial vertical movement
-      duration: 1,
-      stagger: 0.1,  // Delay between each word's reveal
-      ease: "power2.out",  // Smooth easing for a natural feel
-  });
+            // Ensure GSAP runs after spans are created
+            gsap.to("span", {
+                opacity: 1,
+                y: 0,  // Initial vertical movement
+                duration: 1,
+                stagger: 0.1,  // Delay between each word's reveal
+                ease: "power2.out",
+            });
+        });
     </script>
 </body>
 </html>
