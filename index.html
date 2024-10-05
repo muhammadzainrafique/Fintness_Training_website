@@ -1,199 +1,120 @@
-<!DOCTYPE html>
+
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fitness Site</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
+    <style>
+       
+:root{
+    --bg-color:white;
+    --text-color:black;
+}
+body{
+/*     font-family: Satoshi; */
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+
+
+span{
+    width: 100px;
+    height: 100px;
+    opacity: 0.1;
+}
+span:nth-child(32),
+span:nth-child(39),
+span:nth-child(40),
+span:nth-child(41),
+span:nth-child(52),
+span:nth-child(59)
+{
+    background-color: red;
+}
+
+.information-div{
+    margin-inline: 122px;
+}
+div{
+    font-size: 24px;
+    line-height: 41px;
+    text-align: center;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+    input {
+        color: black;
+        font-weight: bolder;           /* Placeholder text color */
+        font-size: inherit;   /* Inherit font size from parent */
+        border: none;         /* Remove border */
+        outline: none;        /* Remove focus outline */
+        background: none;     /* Remove background */
+        padding: 0;           /* Remove padding */
+        width: auto;          /* Auto width initially */
+        display: inline-block;
+    }
+input::placeholder{
+    color: black;
+    font-weight: bold;
+}
+
+    </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <h1 class="text-md"><span class="bg-yellow">X</span>GYM</h1>
+    <div class="information-div">
+        <div class="information-1">We would love to hear from you! If you have a project in mind or just want to say hello, feel free to reach out. You can contact Muhammad Zain via [muhammadzain954208@gmail.com] or give me a call at [+92 347 9937677]. If you prefer, you can also connect with me on LinkedIn or check out my work on GitHub. Just fill in your details below and let’s start a conversation.  Tell me your name <span style="color: black;">([</span> your-name <span style="color: black;">])</span> and share your email <span style="color: black;">([</span> your-email <span style="color: black;">])</span> , and if you want, include a brief message about what you're looking for <span style="color: black;">([</span> your-message <span style="color: black;">])</span>. I’ll get back to you as soon as possible. Looking forward to connecting!
         </div>
-        <div class="links">
-            <ul>
-                <li class="active">Home</li>
-                <li>About Us</li>
-                <li>Classes</li>
-                <li>News</li>
-                <li>Contact</li>
-            </ul>
-        </div>
-        <div class="address bg-yellow place-center">
-            <h2 class="tx-center text-md">Mirpur Azad Kashmir</h2>
-        </div>
-    </header>
-    <main>
-        <section class="section1 hidden">
-            <div class="section1-content">
-                <h1 class="text-xlg text-white tx-center">
-                    Physical activity <br> enhances <span class="text-yellow">positive energy!</span>
-                </h1>
-                <button class="bg-yellow">Join the Gym</button>
-            </div>
-        </section>
-        <section class="section2 place-center hidden">
-            <div class="section2-content ">
-                <h1 class="text-lg tx-center">The real workout starts when you <br> want to stop.</h1>
-                <div class="cards">
-                    <div class="card place-center">
-                        <div class="img">
+    </div>
 
-                        </div>
-                        <h2 class="text-md">Intense Workouts</h2>
-                        <p>Donec nec sapien in urna fermentum ornare. Morbi vel ultrices leo. Sed eu turpis eu arcu vehicula fringilla ut vitae orci.</p>
-                    </div>
-                    <div class="card place-center">
-                        <div class="img">
 
-                        </div>
-                        <h2 class="text-md">Intense Workouts</h2>
-                        <p>Donec nec sapien in urna fermentum ornare. Morbi vel ultrices leo. Sed eu turpis eu arcu vehicula fringilla ut vitae orci.</p>
-                    </div>
-                    <div class="card place-center">
-                        <div class="img">
 
-                        </div>
-                        <h2 class="text-md">Intense Workouts</h2>
-                        <p>Donec nec sapien in urna fermentum ornare. Morbi vel ultrices leo. Sed eu turpis eu arcu vehicula fringilla ut vitae orci.</p>
-                    </div>
-                    
-                </div>
-            </div>
-            <section class="section3 place-center hidden">
-                <div class="section3-content">
-                    <div class="img">
-                        <img src="https://images.unsplash.com/photo-1550345332-09e3ac987658?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGZpdG5lc3N8ZW58MHx8MHx8fDA%3D"  alt="image">
-                    </div>
-                    <div class="content">
-                        <h2 style="opacity: 1;" class="text-white text-lg">
-                            Pay now and get a 25% <span class="text-yellow">Discount</span>
-                        </h2>
-                        <ul class="text-md">
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                        </ul>
-                        <button>Become a Member</button>
-                    </div>
-                </div>
-            </section>
-        </section>
-        <section class="section4 hidden">
-            <div class="section4-content">
-                <div class="reviews">
-                    <sapn class="figures bg-yellow text-md">
-                        1274
-                    </sapn>
-                    <p class="text-md">Happy Clients</p>
-                </div>
-                <div class="reviews">
-                    <sapn class="figures bg-yellow text-md">
-                        356
-                    </sapn>
-                    <p class="text-md">Strong Bodies</p>
-                </div>
-                <div class="reviews">
-                    <sapn class="figures bg-yellow text-md">
-                        57k
-                    </sapn>
-                    <p class="text-md">IG Followers</p>
-                </div>
-                <div class="reviews">
-                    <sapn   class="figures bg-yellow text-md">
-                        24 / 7
-                    </sapn>
-                    <p class="text-md">Working Hours</p>
-                </div>
-            </div>
-        </section>
-        <section class="section5 place-center hidden">
-            <div class="section5-content">
-                <h2 class="text-lg">Meet the <span class="bg-yellow">Trainers</span></h2>
-                <div class="testimonials">
-                    <div class="card hidden">
-                        <img src="/img/fitness master.jpg" alt="fitness trainer img">
-                        <p class="text-md">
-                            <span  class="small-border">Mich</span>eal Smith
-                        </p>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis saepe nesciunt blanditiis!</p>
-                    </div>
-                    <div class="card hidden">
-                        <img src="/img/fitness master.jpg" alt="fitness trainer img">
-                        <p class="text-md">
-                            <span  class="small-border">Mich</span>eal Smith
-                        </p>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis saepe nesciunt blanditiis!</p>
-                    </div>
-                    <div class="card hidden">
-                        <img src="https://th.bing.com/th/id/OIP.uFpQmjqaKjAJPl8wQhsiVAHaE8?rs=1&pid=ImgDetMain" alt="fitness trainer img">
-                        <p class="text-md">
-                            <span  class="small-border">Mich</span>eal Smith
-                        </p>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis saepe nesciunt blanditiis!</p>
-                    </div>
-                    <div class="card hidden">
-                        <img src="/img/fitness master.jpg" alt="fitness trainer img">
-                        <p class="text-md">
-                            <span  class="small-border">Mich</span>eal Smith
-                        </p>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis saepe nesciunt blanditiis!</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section6 place-center hidden">
-            <section class="section6-content">
-                <div class="img">
-                    <img src="/img/measuting.jpg" alt="">
-                </div>
-                <div class="content place-center">
-                    <div class="text">
-                        <h2 class="text-lg">Calculate Your <span class="text-yellow">BMI</span></h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste voluptatum corrupti quisquam deserunt possimus dignissimos reprehenderit. Harum laborum deleniti repellat.</p>
-                    </div>
-                    <div class="calculator">
-                        <div class="inputs">
-                            <input type="number" id="weight" type="text" placeholder="Weight (KG)">
-                            <input type="number" id="height" type="text" placeholder="Height (M)">
-                            <button id="button">Calculate</button>
-                            <input disabled style="background-color: white;" id="result" type="text" placeholder="1.44 (Underweight)">
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A mollitia repudiandae, repellendus in itaque nostrum nemo placeat tempore.</p>
-                    </div>
-                </div>
-            </section>
-        </section>
-        <section class="section7 place-center hidden">
-            <div class="section7-content">
-                <div class="reviews">
-                    <sapn class="figures  text-md">
-                        Location
-                    </sapn>
-                    <p class="text-md"> Allam Iqbal road, <br> Mirpur Azad <br>Kashmir</p>
-                </div>
-                <div class="reviews">
-                    <sapn class="figures text-md">
-                        Subscriptions
-                    </sapn>
-                    <p class="text-md">( +92 ) - 3388339393 <br>( +92 ) - 3388339393</p>
-                </div>
-                <div class="reviews">
-                    <sapn class="figures  text-md">
-                        Email
-                    </sapn>
-                    <p class="text-md">gym_mirpur@test.com</p>
-                </div>
-                <div class="reviews">
-                    <sapn   class="figures  text-md">
-                        Social Media
-                    </sapn>
-                    <p>social media</p>
-                </div>
-            </div>
-        </section>
-    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+         var information = document.querySelector(".information");
+  const infoArray = information.innerHTML.split(" ");
+  information.innerHTML = "";
+  console.log(infoArray);
+
+  var infoDiv = document.querySelector(".information-div"); // Corrected selector
+  if (infoDiv) { // Ensure infoDiv exists
+      infoArray.forEach((element, index) => {  // Using forEach instead of map
+          let node = document.createElement("span");
+          
+          if (index == 32) {
+              // Create an input element for index 32
+              let inputNode = document.createElement("input");
+              inputNode.type = "text";
+              inputNode.value = "muhammadzain954208@gmail.com"; // Set the input value
+              inputNode.style.border = "none"; // Optional styling
+              inputNode.style.outline = "none"; // Optional styling
+              inputNode.style.fontSize = "inherit"; // Ensure input font size matches surrounding text
+
+              node.appendChild(inputNode); // Append the input to the span
+          } else {
+              // For all other indices, create normal text nodes
+              let textNode  = document.createTextNode(element + " "); // Adding a space between words
+              node.appendChild(textNode);
+          }
+
+          information.appendChild(node);  // Append to information
+      });
+  }
+
+  // Ensure GSAP runs after spans are created
+  gsap.to("span", {
+      opacity: 1,
+      y: 0,  // Initial vertical movement
+      duration: 1,
+      stagger: 0.1,  // Delay between each word's reveal
+      ease: "power2.out",  // Smooth easing for a natural feel
+  });
+    </script>
 </body>
 </html>
