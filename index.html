@@ -99,6 +99,51 @@ a:hover{
     color: red;
 }
 
+@media only screen and (max-width: 1000px) {
+    .desktop-nav{
+        display: none;
+    }
+    .hero {
+      flex-direction: column;
+      justify-content: unset;
+      height: auto;
+    }
+    .name-div {
+      width: 100vw;
+      height: auto;
+      /* border: 2px solid black; */
+      font-size: 68px;
+      text-align: center;
+    }
+    .img-div {
+      width: 100vw;
+      /* border: 2px solid red; */
+      height: auto;
+      margin-block: 34px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    }
+    .img-div img{
+      height: 300px;
+      width: 300px;
+    }
+    .descrition {
+      position: unset;
+      text-align: center;
+      width: 100vw;
+      /* border: 2px solid black; */
+      width: 80%;
+      margin: auto;
+    }
+    .hire {
+      position: unset;
+      text-align: center;
+      margin-top: 34px;
+    }
+
+}
+
     </style>
 <!--     <link rel="stylesheet" href="home.css" /> -->
   </head>
@@ -128,6 +173,19 @@ a:hover{
         <span>/</span>
         <a href="#">GitHub</a>
       </div>
+    </nav>
+     <nav class="mobile-nav">
+        <div class="location">
+            <p>Mirpur A.k,</p>
+            <span class="time">09:28 AM</span>
+        </div>
+        <div class="status">
+            <p>Status</p>
+            <span>Avaliable</span>
+        </div>
+        <div class="menue">
+            <p>Menue</p>
+        </div>
     </nav>
     <main>
       <div class="hero">
